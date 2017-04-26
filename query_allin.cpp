@@ -1,0 +1,20 @@
+#include "findPCD_allin.h"
+#include <vector>
+
+/* This is a test. */
+
+int main(){
+    double lon =  -117.1279;
+    double lat = 32.7729;
+    std::vector<double> result;
+    result = pcd_finder(lon, lat, 1);
+    if (result.empty()){
+        std::cout << result.size() << std::endl;
+        return 0;
+    }
+    for(int i =0; i < 10; i++){
+        std::cout << std::endl << result[i] << std::endl;
+    }
+    std::cout << result.size() << std::endl;
+    return 0;
+}
